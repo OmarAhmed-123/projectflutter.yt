@@ -12,7 +12,7 @@ class CurrencyConverterScreen extends StatefulWidget {
 }
 
 class _CurrencyConverterScreenState extends State<CurrencyConverterScreen> {
-  late double _exchangeRate;
+  late double _exchangeRate = 47.98;
   final TextEditingController _amountController = TextEditingController();
   String _convertedAmount = '';
   Map<String, double> _historicalRates = {};

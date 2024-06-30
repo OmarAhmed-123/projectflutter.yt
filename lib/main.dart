@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'gold_price_screen.dart';
@@ -6,8 +9,14 @@ import 'news_service.dart';
 import 'news_screenn.dart';
 import 'currency_exchange_screen.dart';
 import 'currency_converter_screen.dart';
+// ignore: unused_import
+import 'dart:ui';
 
 void main() {
+  FlutterError.onError = (details) {
+    FlutterError.presentError(details);
+    if (kReleaseMode) exit(1);
+  };
   runApp(const MyApp());
 }
 
